@@ -1,207 +1,68 @@
 const IMAGE_CONFIG = {
-  A: { scale: 0.69, offsetY: 0 },
-  B: { scale: 1.0, offsetY: 0 },
-  C: { scale: 1.5, offsetY: 0 },
-  D: { scale: 1.3, offsetY: 0 },
-  E: { scale: 1.35, offsetY: 0 },
-  F: { scale: 1.1, offsetY: 0 },
-  G: { scale: 2.1, offsetY: 0 },
-  H: { scale: 1.3, offsetY: 0 },
-  I: { scale: 1.3, offsetY: 0 },
-  J: { scale: 1.0, offsetY: 0 },
-  K: { scale: 1.6, offsetY: 0 },
-  L: { scale: 1.5, offsetY: 0 },
-  M: { scale: 1.28, offsetY: 0 },
-  N: { scale: 1.22, offsetY: 0 },
-  O: { scale: 1.3, offsetY: 0 },
-  P: { scale: 1.5, offsetY: 0 },
-  Q: { scale: 1.3, offsetY: 0 },
-  R: { scale: 2.39, offsetY: 0 },
-  S: { scale: 1.95, offsetY: 0 },
-  T: { scale: 1.0, offsetY: 0 },
-  U: { scale: 0.95, offsetY: 0 },
-  V: { scale: 1.2, offsetY: 0 },
-  W: { scale: 1.6, offsetY: 0 },
-  X: { scale: 1.6, offsetY: 0 },
-  Y: { scale: 1.0, offsetY: 0 },
-  Z: { scale: 1.0, offsetY: 0 },
-
-  A1: { scale: 0.9, isMutant: true },
-  A2: { scale: 1.0, isMutant: true },
-  A3: { scale: 1.2, isMutant: true },
-  A4: { scale: 1.3, isMutant: true },
-  A5: { scale: 1.4, isMutant: true },
-  A6: { scale: 1.6, isMutant: true },
-  A7: { scale: 1.7, isMutant: true },
-  A8: { scale: 1.9, isMutant: true },
-
-  A_STACK1: { scale: 0.6, isMutant: true },
-  A_STACK2: { scale: 0.6, isMutant: true },
-  A_STACK3: { scale: 0.6, isMutant: true },
-  A_STACK4: { scale: 0.6, isMutant: true },
-  A_STACK5: { scale: 0.6, isMutant: true },
-
-  Q1: { scale: 0.8, isMutant: true },
-  IC_INTER: { scale: 1.3, isMutant: true },
-  AK_INTER: { scale: 1.3, isMutant: true },
-  AK_INTER1: { scale: 1.9, offsetY: -50, isMutant: true },
-  AB_INTER: { scale: 1.3, offsetY: -10, isMutant: true },
-  AC_COMBO: { scale: 1.8, isMutant: true },
-  AC_INTER1: { scale: 1.5, offsetY: -60, isMutant: true },
-  RANDOM_CHAR: { scale: 0.93, isMutant: true },
-  DT_INTER: { scale: 1.4, offsetY: -5, isMutant: true },
-  HT_INTER: { scale: 0.7, isMutant: true },
-  DT_DELAYED: { scale: 2.9, offsetY: -90, isMutant: true },
-
-  K_INTER1: { scale: 0.9, isMutant: true },
-  K_INTER2: { scale: 1.3, isMutant: true },
-  K_INTER3: { scale: 1.9, isMutant: true },
-
-  W1: { scale: 1.0, isMutant: true },
-  W2: { scale: 1.1, isMutant: true },
-  W3: { scale: 1.0, isMutant: true },
-  W4: { scale: 0.9, isMutant: true },
-  W5: { scale: 1.2, isMutant: true },
-  W6: { scale: 1.0, isMutant: true },
-  W7: { scale: 1.3, isMutant: true },
-  W8: { scale: 1.7, isMutant: true },
-  W9: { scale: 2.0, isMutant: true },
-
-  Z2: { scale: 1.0, isMutant: true },
-  ECHEVERIA_MASTER: { scale: 2.8, isMutant: true }
+  A: { scale: 0.69, offsetY: 0 }, B: { scale: 1.0, offsetY: 0 }, C: { scale: 1.5, offsetY: 0 },
+  D: { scale: 1.3, offsetY: 0 }, E: { scale: 1.35, offsetY: 0 }, F: { scale: 1.1, offsetY: 0 },
+  G: { scale: 2.1, offsetY: 0 }, H: { scale: 1.3, offsetY: 0 }, I: { scale: 1.3, offsetY: 0 },
+  J: { scale: 1.0, offsetY: 0 }, K: { scale: 1.6, offsetY: 0 }, L: { scale: 1.5, offsetY: 0 },
+  M: { scale: 1.28, offsetY: 0 }, N: { scale: 1.22, offsetY: 0 }, O: { scale: 1.3, offsetY: 0 },
+  P: { scale: 1.5, offsetY: 0 }, Q: { scale: 1.3, offsetY: 0 }, R: { scale: 2.39, offsetY: 0 },
+  S: { scale: 1.95, offsetY: 0 }, T: { scale: 1.0, offsetY: 0 }, U: { scale: 0.95, offsetY: 0 },
+  V: { scale: 1.2, offsetY: 0 }, W: { scale: 1.6, offsetY: 0 }, X: { scale: 1.6, offsetY: 0 },
+  Y: { scale: 1.0, offsetY: 0 }, Z: { scale: 1.0, offsetY: 0 },
+  A1: { scale: 0.9, isMutant: true }, A2: { scale: 1.0, isMutant: true }, A3: { scale: 1.2, isMutant: true },
+  A4: { scale: 1.3, isMutant: true }, A5: { scale: 1.4, isMutant: true }, A6: { scale: 1.6, isMutant: true },
+  A7: { scale: 1.7, isMutant: true }, A8: { scale: 1.9, isMutant: true },
+  A_STACK1: { scale: 0.6, isMutant: true }, A_STACK2: { scale: 0.6, isMutant: true },
+  A_STACK3: { scale: 0.6, isMutant: true }, A_STACK4: { scale: 0.6, isMutant: true },
+  A_STACK5: { scale: 0.6, isMutant: true }, Q1: { scale: 0.8, isMutant: true },
+  IC_INTER: { scale: 1.3, isMutant: true }, AK_INTER: { scale: 1.3, isMutant: true },
+  AK_INTER1: { scale: 1.9, offsetY: -50, isMutant: true }, AB_INTER: { scale: 1.3, offsetY: -10, isMutant: true },
+  AC_COMBO: { scale: 1.8, isMutant: true }, AC_INTER1: { scale: 1.5, offsetY: -60, isMutant: true },
+  RANDOM_CHAR: { scale: 0.93, isMutant: true }, DT_INTER: { scale: 1.4, offsetY: -5, isMutant: true },
+  HT_INTER: { scale: 0.7, isMutant: true }, DT_DELAYED: { scale: 2.9, offsetY: -90, isMutant: true },
+  K_INTER1: { scale: 0.9, isMutant: true }, K_INTER2: { scale: 1.3, isMutant: true }, K_INTER3: { scale: 1.9, isMutant: true },
+  W1: { scale: 1.0, isMutant: true }, W2: { scale: 1.1, isMutant: true }, W3: { scale: 1.0, isMutant: true },
+  W4: { scale: 0.9, isMutant: true }, W5: { scale: 1.2, isMutant: true }, W6: { scale: 1.0, isMutant: true },
+  W7: { scale: 1.3, isMutant: true }, W8: { scale: 1.7, isMutant: true }, W9: { scale: 2.0, isMutant: true },
+  Z2: { scale: 1.0, isMutant: true }, ECHEVERIA_MASTER: { scale: 2.8, isMutant: true }
 };
 
-const IMAGE_FALLBACK_MAP = {
-  AC_INTER1: "AC_COMBO",
-  W5: "W4",
-  Z2: "Z",
-  DT_DELAYED: "DT_INTER"
-};
+const IMAGE_FALLBACK_MAP = { AC_INTER1: "AC_COMBO", W5: "W4", Z2: "Z", DT_DELAYED: "DT_INTER" };
 
 const SPECIES_MAP = {
-  A: "에케베리아 아가보이데스 크리스마스 / Echeveria agavoides Christmas",
-  B: "홍포도 / Graptoveria Amethorum",
-  C: "황금세덤 / Sedum acre",
-  D: "천탑 / Crassula capitella",
-  E: "수련 / Echeveria Suryeon",
-  F: "러블리 로즈 / Graptoveria Lovely Rose",
-  G: "루비틴트 / Sedum Ruby Tint",
-  H: "비스코사 / Haworthiopsis viscosa",
-  I: "옵투사 / Haworthia cymbiformis var. obtusa",
-  J: "트리코디아데마 덴섬 / Trichodiadema densum",
-  K: "황금사 / Mammillaria elongata",
-  L: "하월시아 교배종 / Haworthia hyb.",
-  M: "십이지권 / Haworthiopsis attenuata",
-  N: "백화기린 / Euphorbia mammillaris cv. variegata",
-  O: "가스테리아 백복륜금 / Gasteria White Variegated",
-  P: "에케베리아 환엽 버밀리언",
-  Q: "가스테리아 그라실리스 / Gasteria armstrongii",
-  R: "원종 프리티금 / Echeveria cv. Rezry",
-  S: "아미산 / Euphorbia gabizan",
-  T: "오층탑 / Haworthia hyb. Manda",
-  U: "리톱스 / Lithops",
-  V: "리톱스 / Lithops",
-  W: "리톱스 군생",
-  X: "왕서각 꽃 / Stapelia",
-  Y: "왕서각 / Stapelia",
-  Z: "왕서각 군생",
-
-  A1: "A sequence mutant",
-  A2: "A sequence mutant",
-  A3: "A sequence mutant",
-  A4: "A sequence mutant",
-  A5: "A sequence mutant",
-  A6: "A sequence mutant",
-  A7: "A sequence mutant",
-  A8: "A sequence mutant",
-A_STACK1: "A vertical stack mutant",
-  A_STACK2: "A vertical stack mutant",
-  A_STACK3: "A vertical stack mutant",
-  A_STACK4: "A vertical stack mutant",
-  A_STACK5: "A vertical stack mutant",
-AB_INTER: "에케베리아 홍포도 변이종 / Echeveria chihuahuensis mut.",
-  AC_COMBO: "A-C hybridized mutant",
-  AC_INTER1: "A-C derived mutant",
-  AK_INTER: "A-K intermediate mutant",
-  AK_INTER1: "A-K derived mutant",
-  IC_INTER: "I-C intermediate mutant",
-  DT_INTER: "D-T intermediate mutant",
-  HT_INTER: "H-T intermediate mutant",
-  DT_DELAYED: "D-T delayed mutant",
-  Q1: "Q derived mutant",
-  RANDOM_CHAR: "random generated mutant",
-K_INTER1: "K diagonal mutant",
-  K_INTER2: "K diagonal mutant",
-  K_INTER3: "K diagonal mutant",
-W1: "W derived cluster",
-  W2: "W derived cluster",
-  W3: "W derived cluster",
-  W4: "W derived cluster",
-  W5: "W derived cluster",
-  W6: "W derived cluster",
-  W7: "W derived cluster",
-  W8: "W derived cluster",
-  W9: "W derived cluster",
- Z2: "Z derived cluster",
-  ECHEVERIA_MASTER: "Echeveria master cluster"
+  A: "에케베리아 아가보이데스 크리스마스 / Echeveria agavoides Christmas", B: "홍포도 / Graptoveria Amethorum", C: "황금세덤 / Sedum acre",
+  D: "천탑 / Crassula capitella", E: "수련 / Echeveria Suryeon", F: "러블리 로즈 / Graptoveria Lovely Rose",
+  G: "루비틴트 / Sedum Ruby Tint", H: "비스코사 / Haworthiopsis viscosa", I: "옵투사 / Haworthia cymbiformis var. obtusa",
+  J: "트리코디아데마 덴섬 / Trichodiadema densum", K: "황금사 / Mammillaria elongata", L: "하월시아 교배종 / Haworthia hyb.",
+  M: "십이지권 / Haworthiopsis attenuata", N: "백화기린 / Euphorbia mammillaris cv. variegata", O: "가스테리아 백복륜금 / Gasteria White Variegated",
+  P: "에케베리아 환엽 버밀리언", Q: "가스테리아 그라실리스 / Gasteria armstrongii", R: "원종 프리티금 / Echeveria cv. Rezry",
+  S: "아미산 / Euphorbia gabizan", T: "오층탑 / Haworthia hyb. Manda", U: "리톱스 / Lithops", V: "리톱스 / Lithops",
+  W: "리톱스 군생", X: "왕서각 꽃 / Stapelia", Y: "왕서각 / Stapelia", Z: "왕서각 군생",
+  A1: "A sequence mutant", A2: "A sequence mutant", A3: "A sequence mutant", A4: "A sequence mutant",
+  A5: "A sequence mutant", A6: "A sequence mutant", A7: "A sequence mutant", A8: "A sequence mutant",
+  A_STACK1: "A vertical stack mutant", A_STACK2: "A vertical stack mutant", A_STACK3: "A vertical stack mutant",
+  A_STACK4: "A vertical stack mutant", A_STACK5: "A vertical stack mutant", AB_INTER: "에케베리아 홍포도 변이종 / Echeveria chihuahuensis mut.",
+  AC_COMBO: "A-C hybridized mutant", AC_INTER1: "A-C derived mutant", AK_INTER: "A-K intermediate mutant",
+  AK_INTER1: "A-K derived mutant", IC_INTER: "I-C intermediate mutant", DT_INTER: "D-T intermediate mutant",
+  HT_INTER: "H-T intermediate mutant", DT_DELAYED: "D-T delayed mutant", Q1: "Q derived mutant",
+  RANDOM_CHAR: "random generated mutant", K_INTER1: "K diagonal mutant", K_INTER2: "K diagonal mutant", K_INTER3: "K diagonal mutant",
+  W1: "W derived cluster", W2: "W derived cluster", W3: "W derived cluster", W4: "W derived cluster",
+  W5: "W derived cluster", W6: "W derived cluster", W7: "W derived cluster", W8: "W derived cluster",
+  W9: "W derived cluster", Z2: "Z derived cluster", ECHEVERIA_MASTER: "Echeveria master cluster"
 };
 
 const GENETIC_MAP = {
-  A: { x: 190, y: -200 },
-  B: { x: 220, y: -170 },
-  C: { x: 70, y: -80 },
-  D: { x: 30, y: -50 },
-  E: { x: 160, y: -220 },
-  F: { x: 240, y: -190 },
-  G: { x: 100, y: -60 },
-  H: { x: 140, y: -40 },
-  I: { x: 160, y: -20 },
-  J: { x: -70, y: 120 },
-  K: { x: 300, y: 200 },
-  L: { x: 190, y: 100 },
-  M: { x: 70, y: 150 },
-  N: { x: -150, y: 150 },
-  O: { x: 210, y: 70 },
-  P: { x: 280, y: -160 },
-  Q: { x: 180, y: 120 },
-  R: { x: 200, y: -230 },
-  S: { x: -110, y: 180 },
-  T: { x: 230, y: 90 },
-  U: { x: -170, y: 220 },
-  V: { x: 110, y: -20 },
-  W: { x: -200, y: 240 },
-  X: { x: -250, y: 180 },
-  Y: { x: -270, y: 160 },
-  Z: { x: -230, y: 200 }
+  A: { x: 190, y: -200 }, B: { x: 220, y: -170 }, C: { x: 70, y: -80 }, D: { x: 30, y: -50 }, E: { x: 160, y: -220 },
+  F: { x: 240, y: -190 }, G: { x: 100, y: -60 }, H: { x: 140, y: -40 }, I: { x: 160, y: -20 }, J: { x: -70, y: 120 },
+  K: { x: 300, y: 200 }, L: { x: 190, y: 100 }, M: { x: 70, y: 150 }, N: { x: -150, y: 150 }, O: { x: 210, y: 70 },
+  P: { x: 280, y: -160 }, Q: { x: 180, y: 120 }, R: { x: 200, y: -230 }, S: { x: -110, y: 180 }, T: { x: 230, y: 90 },
+  U: { x: -170, y: 220 }, V: { x: 110, y: -20 }, W: { x: -200, y: 240 }, X: { x: -250, y: 180 }, Y: { x: -270, y: 160 }, Z: { x: -230, y: 200 }
 };
 
 const GROWTH_STRUCTURE = {
-  A: "rosette",
-  B: "rosette",
-  C: "creeping",
-  D: "tower",
-  E: "rosette",
-  F: "rosette",
-  G: "creeping",
-  H: "radial-short",
-  I: "radial-short",
-  J: "branching",
-  K: "cactus-column",
-  L: "radial-short",
-  M: "tower",
-  N: "euphorbia-column",
-  O: "fan-radial",
-  P: "rosette",
-  Q: "fan-radial",
-  R: "rosette",
-  S: "euphorbia-branch",
-  T: "tower",
-  U: "lithops",
-  V: "lithops",
-  W: "cluster",
-  X: "stapelia-flower",
-  Y: "stapelia-column",
-  Z: "stapelia-cluster"
+  A: "rosette", B: "rosette", C: "creeping", D: "tower", E: "rosette", F: "rosette", G: "creeping", H: "radial-short",
+  I: "radial-short", J: "branching", K: "cactus-column", L: "radial-short", M: "tower", N: "euphorbia-column",
+  O: "fan-radial", P: "rosette", Q: "fan-radial", R: "rosette", S: "euphorbia-branch", T: "tower", U: "lithops",
+  V: "lithops", W: "cluster", X: "stapelia-flower", Y: "stapelia-column", Z: "stapelia-cluster"
 };
 
 const COMPOSITE_GROWTH_STRUCTURE = {
@@ -210,9 +71,7 @@ const COMPOSITE_GROWTH_STRUCTURE = {
     { type: "inner-growth-core", role: "meristem", x: 0.06, y: -0.04, size: 0.28, rotation: 0.22, leafDensity: 10 },
     { type: "outer-aging-ring", role: "mature-leaf-band", x: 0, y: 0, size: 1.18, rotation: -0.08, leafDensity: 18, asymmetry: 0.12 }
   ],
-  B: [
-    { type: "branch-rosette-cluster", role: "main-branch", x: 0, y: 0, size: 1.0, growth: "branching-rosette-colony", nodeCount: 5, curvature: 0.68 }
-  ],
+  B: [{ type: "branch-rosette-cluster", role: "main-branch", x: 0, y: 0, size: 1.0, growth: "branching-rosette-colony", nodeCount: 5, curvature: 0.68 }],
   C: [
     { type: "sedum-mat-cluster", role: "dominant-mass", x: 0, y: 0, size: 1.0, branchDensity: 92, repetition: 0.88 },
     { type: "sedum-bean-rosette", role: "upper-branch", x: 0.42, y: -0.58, size: 0.42, rotation: 0.3 },
@@ -350,9 +209,7 @@ const COMPOSITE_GROWTH_STRUCTURE = {
     { type: "stapelia-column", role: "paired-column-body", x: 0, y: 0, size: 1.0, segmentCount: 2 },
     { type: "root-system", role: "base-root", x: 0, y: 0.92, size: 0.48 }
   ],
-  Y: [
-    { type: "stapelia-radial-star", role: "main-body", x: 0, y: 0, size: 1.0, armCount: 18 }
-  ],
+  Y: [{ type: "stapelia-radial-star", role: "main-body", x: 0, y: 0, size: 1.0, armCount: 18 }],
   Z: [
     { type: "stapelia-radial-star", role: "main-body", x: 0, y: 0, size: 1.0, armCount: 18 },
     { type: "star-flower", role: "surface-flower-group", x: -0.32, y: -0.08, size: 0.58, repeat: 4 }
@@ -457,7 +314,8 @@ async function init() {
   createCoordinateLayer();
   drawGrowthMapPanel();
 
-  await preloadImages();
+  // 이미지 로드는 기다리지 않음 - 백그라운드에서 병렬 처리
+  preloadImages();
 
   input.disabled = false;
   input.placeholder = "TYPE A-Z";
@@ -503,60 +361,58 @@ function ensureXrayButton() {
   layer.appendChild(btn);
 }
 
-async function preloadImages() {
-  const names = Object.keys(IMAGE_CONFIG);
+function preloadImages() {
+  // 모든 이미지를 백그라운드에서 병렬 로드 (await 제거 = 기다리지 않음)
+  // 자주 쓰는 단일 알파벳(A~Z)을 먼저 로드 → 첫 입력이 빨라짐
+  const names = Object.keys(IMAGE_CONFIG).sort((a, b) => {
+    const aSingle = /^[A-Z]$/.test(a) ? 0 : 1;
+    const bSingle = /^[A-Z]$/.test(b) ? 0 : 1;
+    return aSingle - bSingle;
+  });
 
-  await Promise.all(
-    names.map((name) => {
-      return new Promise((resolve) => {
-        const img = new Image();
-        img.decoding = "async";
-        img.loading = "eager";
-        img.fetchPriority = "high";
+  names.forEach((name) => {
+    const img = new Image();
+    img.decoding = "async";
+    img.loading = "eager";
+    img.fetchPriority = "high";
 
-        img.onload = async () => {
+    img.onload = async () => {
+      try {
+        if (img.decode) await img.decode();
+      } catch (e) {}
+      imageCache[name] = img;
+    };
+
+    img.onerror = () => {
+      const fallbackName = IMAGE_FALLBACK_MAP[name];
+
+      if (fallbackName) {
+        const fallback = new Image();
+        fallback.decoding = "async";
+        fallback.loading = "eager";
+        fallback.fetchPriority = "high";
+
+        fallback.onload = async () => {
           try {
-            if (img.decode) await img.decode();
+            if (fallback.decode) await fallback.decode();
           } catch (e) {}
+          imageCache[name] = fallback;
+        };
+
+        fallback.onerror = () => {
+          console.warn("이미지 로드 실패:", name);
           imageCache[name] = img;
-          resolve();
         };
 
-        img.onerror = () => {
-          const fallbackName = IMAGE_FALLBACK_MAP[name];
+        fallback.src = `./images/${fallbackName}.png`;
+      } else {
+        console.warn("이미지 로드 실패:", name);
+        imageCache[name] = img;
+      }
+    };
 
-          if (fallbackName) {
-            const fallback = new Image();
-            fallback.decoding = "async";
-            fallback.loading = "eager";
-            fallback.fetchPriority = "high";
-
-            fallback.onload = async () => {
-              try {
-                if (fallback.decode) await fallback.decode();
-              } catch (e) {}
-              imageCache[name] = fallback;
-              resolve();
-            };
-
-            fallback.onerror = () => {
-              console.warn("이미지 로드 실패:", name);
-              imageCache[name] = img;
-              resolve();
-            };
-
-            fallback.src = `./images/${fallbackName}.png`;
-          } else {
-            console.warn("이미지 로드 실패:", name);
-            imageCache[name] = img;
-            resolve();
-          }
-        };
-
-        img.src = `./images/${name}.png`;
-      });
-    })
-  );
+    img.src = `./images/${name}.png`;
+  });
 }
 
 function handleKeydown(e) {
@@ -611,7 +467,7 @@ clearTimeout(window.rebuildDelay);
 window.rebuildDelay = setTimeout(() => {
   rebuildFrameId = null;
   rebuildFromSequence(nextSequence);
-}, 50);
+}, 0);
 }
 
 function clearActiveTimers() {
@@ -938,27 +794,37 @@ function createSucculentElement(imgName, x, y, rot, sourceInput = "-", prevInput
   node.style.top = `${y - baseWidth / 2 + (config.offsetY || 0)}px`;
   node.style.transform = `rotate(${rot}deg)`;
 
+  // 이미지를 로드 완료 후에 DOM에 추가하는 함수
+  const addToStage = () => {
+    node.appendChild(img);
+    stage.appendChild(node);
+  };
+
   img.onerror = () => {
-  
     const fallbackName = IMAGE_FALLBACK_MAP[imgName] || "A";
     if (img.dataset.fallbackTried === "true") {
       img.style.display = "none";
       node.innerHTML = `<span style="color:#000; font-size:10px; background:#fff; border:1px solid red;">Missing: ${imgName}</span>`;
       console.warn("Missing image:", imgName);
-     
-     
+      addToStage();
       return;
     }
- 
+
     img.dataset.fallbackTried = "true";
     img.src = imageCache[fallbackName]?.src || `./images/${fallbackName}.png`;
     console.warn(`Missing image: ${imgName}. Fallback to ${fallbackName}.`);
   };
 
-  if (!cachedImg) img.src = `./images/${imgName}.png`;
-
-node.appendChild(img);
-stage.appendChild(node);
+  if (cachedImg) {
+    // 캐시가 있으면 이미 로드됨 → 바로 DOM 추가
+    addToStage();
+  } else {
+    // 캐시가 없으면 로드 완료 후 DOM 추가
+    img.onload = () => {
+      addToStage();
+    };
+    img.src = `./images/${imgName}.png`;
+  }
 }
 
 function recordReceipt(imgName, x, y, rot, sourceInput, prevInput, distance, angle, config) {
@@ -1103,6 +969,14 @@ function updateDataLog(dist, angle, isSame) {
 async function captureFullStage() {
 
   console.time("SAVE");
+
+  // X-Ray 모드면 초록 골격(SVG) 레이어를 따로 저장
+  if (document.body.classList.contains("xray-active")) {
+    await captureXrayStage();
+    console.timeEnd("SAVE");
+    return;
+  }
+
   const nodes = [...document.querySelectorAll(".succulent-node")];
   const MAX_SAVE_NODES = 250;
 
@@ -1192,6 +1066,112 @@ await new Promise(resolve => setTimeout(resolve, 1500));
       saveBtn.textContent = "↓";
     }
   }
+}
+
+async function captureXrayStage() {
+  const saveBtn = document.getElementById("save-btn");
+  if (saveBtn) {
+    saveBtn.disabled = true;
+    saveBtn.textContent = "...";
+  }
+
+  try {
+    if (!growthBranchLayer || receiptRecords.length === 0) return;
+
+    // 식물이 그려진 좌표 범위 계산 (SVG는 화면 전체 좌표 기준)
+    let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+    receiptRecords.forEach((item) => {
+      const x = START_X + item.stageX;
+      const y = START_Y - item.stageY;
+      minX = Math.min(minX, x);
+      minY = Math.min(minY, y);
+      maxX = Math.max(maxX, x);
+      maxY = Math.max(maxY, y);
+    });
+
+    const padding = 300;
+    const boxX = minX - padding;
+    const boxY = minY - padding;
+    const boxW = Math.ceil(maxX - minX + padding * 2);
+    const boxH = Math.ceil(maxY - minY + padding * 2);
+
+    // 골격 SVG 내용을 복제해 딱 맞는 크기의 새 SVG로 감쌈
+    const svgNS = "http://www.w3.org/2000/svg";
+    const exportSvg = document.createElementNS(svgNS, "svg");
+    exportSvg.setAttribute("xmlns", svgNS);
+    exportSvg.setAttribute("width", boxW);
+    exportSvg.setAttribute("height", boxH);
+    exportSvg.setAttribute("viewBox", `${boxX} ${boxY} ${boxW} ${boxH}`);
+
+    // 흰 배경
+    const bg = document.createElementNS(svgNS, "rect");
+    bg.setAttribute("x", boxX);
+    bg.setAttribute("y", boxY);
+    bg.setAttribute("width", boxW);
+    bg.setAttribute("height", boxH);
+    bg.setAttribute("fill", "#ffffff");
+    exportSvg.appendChild(bg);
+
+    // 골격 선들을 복제 + 초록색 스타일을 인라인으로 직접 지정
+    [...growthBranchLayer.childNodes].forEach((child) => {
+      if (child.nodeType !== 1) return;
+      const c = child.cloneNode(true);
+      applyXrayInlineStyle(c);
+      exportSvg.appendChild(c);
+    });
+
+    // SVG → 이미지 → 캔버스 → PNG
+    const svgString = new XMLSerializer().serializeToString(exportSvg);
+    const svgBlob = new Blob([svgString], { type: "image/svg+xml;charset=utf-8" });
+    const url = URL.createObjectURL(svgBlob);
+
+    await new Promise((resolve, reject) => {
+      const image = new Image();
+      image.onload = () => {
+        const canvas = document.createElement("canvas");
+        canvas.width = boxW;
+        canvas.height = boxH;
+        const ctx = canvas.getContext("2d");
+        ctx.fillStyle = "#ffffff";
+        ctx.fillRect(0, 0, boxW, boxH);
+        ctx.drawImage(image, 0, 0);
+        URL.revokeObjectURL(url);
+
+        const link = document.createElement("a");
+        link.href = canvas.toDataURL("image/png");
+        link.download = `succulent_xray_${Date.now()}.png`;
+        link.click();
+        resolve();
+      };
+      image.onerror = reject;
+      image.src = url;
+    });
+  } catch (err) {
+    console.error("X-Ray save failed:", err);
+  } finally {
+    if (saveBtn) {
+      saveBtn.disabled = false;
+      saveBtn.textContent = "↓";
+    }
+  }
+}
+
+// 골격 요소에 초록색 스타일을 인라인으로 적용 (CSS가 안 따라오므로 직접 지정)
+function applyXrayInlineStyle(el) {
+  if (el.nodeType !== 1) return;
+  const tag = el.tagName.toLowerCase();
+  if (["path", "line", "ellipse", "circle"].includes(tag)) {
+    const isDot = el.classList && el.classList.contains("growth-dot");
+    if (isDot) {
+      el.setAttribute("fill", "rgb(60, 150, 80)");
+      el.setAttribute("stroke", "none");
+    } else {
+      el.setAttribute("fill", "none");
+      el.setAttribute("stroke", "rgb(60, 150, 80)");
+      el.setAttribute("stroke-width", "1.5");
+    }
+  }
+  [...el.childNodes].forEach(applyXrayInlineStyle);
 }
 
 function toggleMutantOnly() {

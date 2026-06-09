@@ -337,49 +337,44 @@ input {
   stroke: none;
 }
 
+/* =======================================================
+   GREEN X-RAY VISUAL STABILIZATION (WITH INLINE INTERCEPT)
+   ======================================================= */
+
+/* 자바스크립트의 인라인 스타일(display: block)을 완벽하게 덮어쓰고 컬러 이미지를 완전 숨김 처리 */
+body.xray-active .succulent-node,
 body.xray-active .succulent-node img {
-  opacity: 0.08;
-  filter: grayscale(1) contrast(1.2);
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
 }
 
-body.xray-active .growth-skeleton {
-  display: block;
-}
-body.xray-active .succulent-node img {
-  opacity: 0;
-}
-
-body.xray-active .growth-skeleton {
-  display: none;
-}
-
-#growth-branch-layer {
+/* 엑스레이 전용 드로잉 보드가 최상단 레이어에서 선명하게 보이도록 설정 */
+body.xray-active #growth-branch-layer {
+  display: block !important;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 50000px;
+  height: 50000px;
   pointer-events: none;
-  z-index: 9000;
-  display: none;
+  z-index: 9999999 !important;
   overflow: visible;
 }
 
-body.xray-active #growth-branch-layer {
-  display: block;
-}
-
+/* 수학적 기하학 뼈대 구조선들이 흐려지지 않고 균일한 초록빛 테두리를 띠도록 지정 */
 #growth-branch-layer path,
 #growth-branch-layer line,
 #growth-branch-layer ellipse,
 #growth-branch-layer circle {
-  fill: none;
-  stroke: rgba(60, 150, 80, 0.78);
-  stroke-width: 1.35;
-  vector-effect: non-scaling-stroke;
+  fill: none !important;
+  stroke: rgb(60, 150, 80) !important;
+  stroke-width: 1.5px !important;
+  vector-effect: non-scaling-stroke !important;
 }
 
+/* L-system 구조 상 성장의 결절점이 되는 내부 코어 점들을 초록색 면으로 가득 채움 */
 #growth-branch-layer .growth-dot {
-  fill: rgba(60, 150, 80, 0.95);
-  stroke: none;
+  fill: rgb(60, 150, 80) !important;
+  stroke: none !important;
 }
